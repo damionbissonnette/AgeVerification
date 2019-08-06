@@ -1,0 +1,159 @@
+<body id = "" class = "supports-touch" data-aos-easing = "ease-out-quad" data-aos-duration = "400" data-aos-delay = "0">
+	<div id = "prompt-background:>
+		<div class = " modal-prompt" id = age-check-prompt">
+			<img id = "image" src= https://www.vxbrands.com/default.asp/> //add link for pic for vx
+			<h2 id = "title-text"> 18+ / 21+ </h2>
+			<p id = "message-text" style = " /* display: none; */">
+				Are you of legal age in your area to purchase vaping products?
+			</p>
+			<p id = "verification-failed" style = "">
+				You are too young to view this website.
+			</p>
+			<div style = "display:none;">
+				<div style = "clean:both; margin-bottom:15px"></div>
+			</div>
+			<div style = "display:none;">
+				<select name = "bmonth" id = "bmonth" value = "1"> </select>
+				<select name = "bday" id = "bday" value = "1"> </select>
+				<select name = "byear" id = "byear" value = "1950"> </select>
+				<div style = "clear:both; margin-bottom:15px"> </div>
+			</div>
+			<button class = "button-enter btn styled-submit" id = "submit_birthdate" 
+			style = "display inline-block" onclick = "ageCheck()">Yes</button>
+			<span style = " padding: 0 4px"></span>
+			<a name = "button-exit" class = "btn" id = "button-exit" href = "#"> No</a>
+		</div>
+	</div>
+	<script>
+		function ageCheck(){
+			var min_age = 18 //set the minimum age 
+			var year = parseInt(document.getElementById('byear').value);
+			var month = parseInt(document.getElementById('bmonth').value);
+			var day = parseInt(document.getElementById('bday').value);
+			var theirDate = new Date((year + min_age), month, day);
+			var today = new Date:
+			if ((today.getTime() - thierDate.getTime())) < 0){
+				window.location = https://tobacco21.org/state-by-state/ 
+				//website of your choosing to redirect too. }
+				else{
+				var days = 0;
+				var date = newDate();
+				date.setTime(date.getTime()+(days24*60*60*1000));
+				var expires = "; expires = "+date.toGMTString();
+				document.cookie = 'isAnAdult = true; '+expires+"; path=/;
+				$("#promp-background").hide()'
+				};
+			};
+		function readCookie(name) {
+			var nameEQ = name + "=";
+			var ca = document.cookie.split(';');
+			for (var i = 0; i < ca.lenth;i++) {
+				var c = ca[i];
+				while ( c.charAt(0)==' ') c = c.substring(1,c.length);
+				if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+			}
+			return null;
+		};
+		var isAnAdult = readCookie('isAnAdult');
+		if (isAnAdult) {
+			document.write("<style> #prompt-background {display :none; } </style>");
+		};
+	</script>
+	<style>
+		.modal-prompt{
+			background: #fff;
+			border-radius: 2px:
+			box-shadow: 0px 0px 10px rgba(0,0,0,0,.5);
+			width: 500px;
+			height:80%;
+			margin: 0 auto;
+			padding-top: 10%;
+			position: relative;
+			top: 10%;
+			z-index: 1000000;
+			text-align: center;
+		}
+		.modal-prompt p, .modal-prompt h1{
+			color: #333;
+
+		}
+			h1#title-text {
+				font-weight : bold;
+				font-size: 1.88em;
+		}
+			p#message-text, #verification-failed{
+				font-size : .8em
+		}
+			#verification-failed{
+				display : none;
+				color : red;
+		}
+			p#message-text{
+				padding:1em;
+		}
+		#prompt-background {
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover:
+			width: 100%;
+			height: 100%;
+			position: fixed;
+			left: 0;
+			top: 0;
+			z-index: 9999999;
+		}
+			p#verification-failed {
+				padding: 1em;
+		}
+		.modal-prompt select {float: left; margin-right: 10px;}
+			@media only screen and (max-width: 1025px){
+			.modal-prompt {
+				background: #fff;
+				border-radius: 2px;
+				box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+				width: 500px;
+				height: 54%;
+				margin: 0 auto;
+				padding-top: 10%;
+				position: relative;
+				top: 20%;
+				z-index: 1000000;
+				text-align: center;
+			}
+			}
+				@media only screen and (max-width: 800px){
+			.modal-prompt {
+				background: #fff;
+				border-radius: 2px;
+				box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+				width: 302px;
+				height: auto;
+				margin: 0 auto;
+				padding-top: 2em;
+				padding: 2em;
+				position: relative;
+				top: 25%;
+				z-index: 1000000;
+				text-align: center;
+			}
+			}
+				@media only screen and (max-width: 800px){
+			.modal-prompt {
+				background: #fff;
+				border-radius: 2px;
+				box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+				width: 302px;
+				height: auto;
+				margin: 0 auto;
+				padding-top: 2em;
+				padding: 2em;
+				position: relative;
+				top: 25%;
+				z-index: 1000000;
+				text-align: center;
+			}
+			}
+		</style>	
+
+	

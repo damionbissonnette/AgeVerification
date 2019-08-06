@@ -1,0 +1,18 @@
+<html>
+<header>
+<title> Check Age!</title>
+
+<script type= "text/javascript">
+var ageCheck = window.prompt ("Please enter your age:")
+
+if (ageCheck < 18) {
+	
+	window.alert( "You submitted that you are: + ageCheck + ": years old");
+	window.alert( "you must be at least eighteen years old to visit this site.);
+	location.href( " javascript:history.back()");
+}
+else ( ageCheck > 18 ) {
+		
+	window.alert ( "You are old enough to enter site!:) ;
+}
+</script>
