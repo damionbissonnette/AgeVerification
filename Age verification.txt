@@ -41,7 +41,7 @@
 				date.setTime(date.getTime()+(days24*60*60*1000));
 				var expires = "; expires = "+date.toGMTString();
 				document.cookie = 'isAnAdult = true; '+expires+"; path=/;
-				$("#promp-background").hide()'
+				location.reload();
 				};
 			};
 		function readCookie(name) {
